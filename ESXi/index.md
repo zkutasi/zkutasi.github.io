@@ -119,3 +119,10 @@ The full howto is [here](https://doc.pfsense.org/index.php/PfSense_on_VMware_vSp
 ## GUI is missing the remove option or it is not working due to some error
 
 The ESXi 6.5 GUI is full of bugs, one is pretty annoying: you simply cannot easily remove an already added USB device sometimes, or change it. [This](https://jc-lan.tk/2017/04/17/unable-to-remove-usb-controller-from-esxi-6-5-virtual-machine/) helped me to solve this annoyance.
+
+## Restore legacy USB drivers
+
+ESXi 6.5 sports a common USB driver for all, and it might not work out so great, so you might want to try out the old ones that might be a bit better. Simply do
+
+1. `esxcli system module set -m=vmkusb -e=FALSE`
+2. Reboot the ESXi box
