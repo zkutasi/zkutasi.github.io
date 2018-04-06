@@ -84,7 +84,7 @@ This is the better option, if you are able to do it.
     # INTEL Sunrise Point-H AHCI Controller
     8086  a102  d3d0  false
     ```
-
+    
         1. If you need to check yours, issue the follwing commands
     
     ```
