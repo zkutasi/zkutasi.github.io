@@ -85,14 +85,14 @@ This is the better option, if you are able to do it.
     8086  a102  d3d0  false
     ```
     
-        1. If you need to check yours, issue the follwing commands
+      1. If you need to check yours, issue the following commands
     
     ```
     lspci
     lspci -n
     ```
     
-        1. Check for your controller name in the first, and the matching line in the second output. Your data needed is there.
+      1. Check for your controller name in the first, and the matching line in the second output. Your data needed is there.
 
     1. Reboot the ESXi box
   
