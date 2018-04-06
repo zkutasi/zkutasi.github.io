@@ -71,31 +71,31 @@ Taken from [here](https://gist.github.com/Hengjie/1520114890bebe8f805d337af4b3a0
 
 This is the better option, if you are able to do it.
 
-1. There is an issue that not too many SATA controllers are properly configured in ESXi to be able to do passthrough, although they are perfectly capable of. To fix this:
-    1. Check the passthru mapping file for your controller
+There is an issue that not too many SATA controllers are properly configured in ESXi to be able to do passthrough, although they are perfectly capable of. To fix this:
+1. Check the passthru mapping file for your controller
 
     ```
     cat /etc/vmware/passthru.map
     ```
     
-    1. If it does not contain your controller you need to add it yourself. For this you also need the proper information for it (mine was provided though by VmWare themselves).
+1. If it does not contain your controller you need to add it yourself. For this you also need the proper information for it (mine was provided though by VmWare themselves).
   
     ```
     # INTEL Sunrise Point-H AHCI Controller
     8086  a102  d3d0  false
     ```
     
-      1. If you need to check yours, issue the following commands
+1. If you need to check yours, issue the following commands
     
     ```
     lspci
     lspci -n
     ```
     
-      1. Check for your controller name in the first, and the matching line in the second output. Your data needed is there.
+1. Check for your controller name in the first, and the matching line in the second output. Your data needed is there.
+1. Reboot the ESXi box
 
-    1. Reboot the ESXi box
-  
+Now to do the passthrough:
 1. Select passthrough for the device in the ESXi GUI
 
     ```
