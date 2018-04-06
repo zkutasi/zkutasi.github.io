@@ -21,7 +21,7 @@ Taken from [here](https://gist.github.com/Hengjie/1520114890bebe8f805d337af4b3a0
 
 First you need to create mappings, which can only be done in the CLI:
 1. Enable SSH to your ESXi if you have not done so
-```Host -> Actions -> Services -> Enable Secure Shell (SSH)
+```Host -> Actions -> Services -> Enable Secure Shell (SSH)```
 1. SSH into
 1. Once inside, see which devices are attached to the machine
 ```ls -l /vmfs/devices/disks/```
