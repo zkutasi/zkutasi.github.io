@@ -21,12 +21,15 @@ Taken from [here](https://gist.github.com/Hengjie/1520114890bebe8f805d337af4b3a0
 
 First you need to create mappings, which can only be done in the CLI:
 1. Enable SSH to your ESXi if you have not done so
+
 ```Host -> Actions -> Services -> Enable Secure Shell (SSH)```
 1. SSH into
 1. Once inside, see which devices are attached to the machine
+
 ```ls -l /vmfs/devices/disks/```
 1. Physical disks take prefix t10
 1. Now one needs to map these onto vmdk files that are able to be added to VMs
+
 ```vmkfstools -z DISK /vmfs/volumes/DATASTORE/VM/VMDKFILE```
 
 Now, the mapping is done. Then add it to the VM on the ESXi GUI:
